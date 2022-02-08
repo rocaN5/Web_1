@@ -93,6 +93,7 @@ body
 
 #top-button
 {
+    z-index: 9999;
     left: 30px;
     bottom: 30px;
     padding: 24px;
