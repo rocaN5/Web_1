@@ -1,0 +1,615 @@
+/* ••• Default settings ••• */
+*
+{
+    color: #fff;
+	font-family: Roboto-Regular;
+}
+
+body
+{
+    margin: 0;
+    border: 0;
+    padding: 0;
+    overflow: overlay;
+    overflow-x: hidden;
+    background-color: #000;
+}
+
+::-webkit-scrollbar 
+{
+    display: none;
+}
+/* ••• Default settings END ••• */
+
+/* ••• Fonts adding ••• */
+
+@font-face
+{
+    font-style: normal;
+    font-weight: normal;
+    font-family: "Roboto-Bold";
+    src: url("fonts/Roboto-Bold.ttf") format("truetype");
+}
+
+@font-face
+{
+    font-style: normal;
+    font-weight: normal;
+    font-family: "Roboto-Regular";
+    src: url("fonts/Roboto-Regular.ttf") format("truetype");
+}
+
+@font-face
+{
+    font-style: normal;
+    font-weight: normal;
+    font-family: "Roboto-Light";
+    src: url("fonts/Roboto-Light.ttf") format("truetype");
+}
+
+@font-face
+{
+    font-style: normal;
+    font-weight: normal;
+    font-family: "Roboto-Black";
+    src: url("fonts/Roboto-Black.ttf") format("truetype");
+}
+
+@font-face
+{
+    font-style: normal;
+    font-weight: normal;
+    font-family: "Roboto-Light-Italic";
+    src: url("fonts/Roboto-LightItalic.ttf") format("truetype");
+}
+
+@font-face
+{
+    font-style: normal;
+    font-weight: normal;
+    font-family: "Roboto-Medium";
+    src: url("fonts/Roboto-Medium.ttf") format("truetype");
+}
+
+@font-face
+{
+    font-style: normal;
+    font-weight: normal;
+    font-family: "RobotoCondensed-Regular";
+    src: url("fonts/RobotoCondensed-Regular.ttf") format("truetype");
+}
+
+@font-face
+{
+    font-style: normal;
+    font-weight: normal;
+    font-family: "Roboto-Italic";
+    src: url("fonts/Roboto-Italic.ttf") format("truetype");
+}
+
+/* ••• Fonts adding END ••• */
+
+/* ••• To top button ••• */
+
+#top-button
+{
+    left: 30px;
+    bottom: 30px;
+    padding: 24px;
+    outline: none;
+    display: none;
+    cursor: pointer;
+    position: fixed;
+    overflow: hidden;
+    border-radius: 50%;
+    background-size: 25px;
+    border: 2px solid #292929;
+    background-color: #ffffff;
+    background-repeat: no-repeat;
+    animation: arrow-animation 1s;
+    background-position: 12px 12px;
+    box-shadow: 6px 5px 20px 0px #000000;
+    -webkit-box-shadow: 6px 5px 20px 0px #000000;
+    background-image: url(img/web-stuff/arrow-up.png);
+}
+
+#top-button:hover
+{
+    left: 30px;
+    bottom: 30px;
+    padding: 24px;
+    transition: 0.5s;
+    background-size: 25px;
+    border: 2px solid white;
+    background-color: #292929;
+    background-position: 12px 12px;
+    background-image: url(img/web-stuff/arrow-up-white.png);
+}
+
+@keyframes arrow-animation
+{
+    0%
+    {
+        left: 0;
+        bottom: 0;
+        opacity: 0;
+    }
+
+    100%
+    {
+        opacity: 1;
+    }
+}
+
+/* ••• To top button END ••• */
+
+/* ••• Root ••• */
+
+:root
+{
+    --hero-bg-size: 500px;
+    --web-margin: 7.2%;
+}
+
+/* ••• Root END ••• */
+
+/* ••• CODE :P ••• */
+
+header
+{
+    width: 100%;
+    height: 49px;
+    z-index: 99999;
+    position: relative;
+    background-color: #ff000000;
+    border-bottom: 1px solid #515151;
+}
+
+header div.header-blure-segment
+{
+    width: 100%;
+    height: 100%;
+    filter: blur(3px);
+    position: relative;
+    background-image: url(img/content/content-bg.png);
+}
+
+section.preview-content
+{
+    width: 100%;
+    height: 860px;
+    display: block;
+    position: relative;
+    background-position: 0px -50px;
+    background-repeat: no-repeat;
+    background-image: url(img/content/content-bg.png);
+}
+
+.hero-logo-bg
+{
+    transition: 400ms;
+    border-radius: 50%;
+    position: absolute;
+    width: var(--hero-bg-size);
+    height: var(--hero-bg-size);
+    box-shadow: 6px 6px 20px 4px #000;
+    left: calc(50% - (var(--hero-bg-size) / 2));
+    top: calc(38% - 50px - (var(--hero-bg-size) / 2));
+    background: linear-gradient(0deg , #6b0303 0%, #d70000 100% );
+}
+
+.hero-logo-bg img
+{
+    transition: 400ms;
+}
+
+.hero-logo-bg:hover
+{
+    transition: 400ms;
+    transform: scale(1.025);
+}
+
+.hero-logo-bg:hover img
+{
+    transition: 400ms;
+    transform: scale(1.05);
+}
+
+section div.hero-logo-bg>img
+{
+    top: 0px;
+    left: -35px;
+    position: relative;
+}
+
+.movie-title
+{
+    top: 25%;
+    left: var(--web-margin);
+    color: #fff;
+    width: 438px;
+    height: 150px;
+    display: block;
+    font-size: 72px;
+    position: relative;
+    font-family: Roboto-Black;
+    text-transform: uppercase;
+    text-shadow: 0px 0px 20px #000;
+}
+
+.movie-title>span
+{
+    color: white;
+    display: block;
+    font-size: 42px;
+    position: relative;
+    font-family: Roboto-Black;
+    text-transform: uppercase;
+}
+
+.movie-subtitle
+{
+    top: 412px;
+    width: 280px;
+    font-size: 16px;
+    position: absolute;
+    text-align: justify;
+    left: var(--web-margin);
+}
+
+.movie-subtitle span
+{
+    margin-left: 60px;
+}
+
+.ratings
+{
+    top: 10%;
+    left: var(--web-margin);
+    display: flex;
+    position: absolute;
+}
+
+.rating-sphere
+{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    position: relative;
+    background-color: #fff;
+}
+
+.rating-sphere .rating-score
+{
+    margin: 0px;
+    color: #c10000;
+    font-size: 24px;
+    margin-top: 14px;
+    margin-left: 11px;
+    position: absolute;
+    font-family: Roboto-Black;
+    text-transform: uppercase;
+}
+
+.ratings-info
+{
+    margin-left: 10px;
+}
+
+.ratings h1
+{
+    margin: 0;
+}
+
+.ratings .line-1
+{
+    color: #fff;
+    font-size: 16px;
+    font-weight: normal;
+    font-family: Roboto-Regular;
+}
+
+.ratings .line-2
+{
+    color: #c10000;
+    font-size: 16px;
+    margin-left: 10px;
+    font-family: Roboto-Medium;
+}
+
+.ratings .line-3
+{
+    color: #fff;
+    font-size: 16px;
+    font-weight: normal;
+    font-family: Roboto-Regular;
+}
+
+.ratings .line-3 span
+{
+    font-family: Roboto-Italic;
+}
+
+
+.age-limit
+{
+    top: 10%;
+    right: var(--web-margin);
+    display: flex;
+    position: absolute;
+}
+
+.age-limit-sphere
+{
+    width: 60px;
+    height: 60px;
+    position: relative;
+    border-radius: 50%;
+    background-color: #fff;
+}
+
+.age-limit-sphere .age-limit-score
+{
+    margin: 0px;
+    color: #c10000;
+    font-size: 24px;
+    margin-top: 14px;
+    margin-left: 11px;
+    position: absolute;
+    font-family: Roboto-Black;
+    text-transform: uppercase;
+}
+
+.age-limit-info
+{
+    text-align: right;
+    margin-right: 10px;
+}
+
+.age-limit h1
+{
+    margin: 0;
+}
+
+.age-limit .line-1
+{
+    color: #fff;
+    font-size: 16px;
+    font-weight: normal;
+    font-family: Roboto-Regular;
+}
+
+.age-limit .line-2
+{
+    color: #c10000;
+    font-size: 16px;
+    margin-right: 10px;
+    font-family: Roboto-Medium;
+}
+
+.age-limit .line-3
+{
+    color: #fff;
+    font-size: 16px;
+    font-weight: normal;
+    font-family: Roboto-Regular;
+}
+
+.age-limit .line-3 span
+{
+    font-family: Roboto-Italic;
+}
+
+.movie-trailer-container
+{
+    top: 278px;
+    right: var(--web-margin);
+    position: absolute;
+}
+
+.movie-trailer-container h1
+{
+    right: 0;
+    margin: 0px;
+    color: #fff;
+    text-align: right;
+    position: relative;
+    font-family: Roboto-Bold;
+    text-transform: uppercase;
+}
+
+.movie-trailer-box
+{
+    width: 271px;
+    height: 179px;
+    cursor: pointer;
+    overflow: hidden;
+    margin-top: 18px;
+    position: relative;
+    box-shadow: 0px 0px 10px 0px #000;
+}
+
+.movie-trailer
+{
+    width: 100%;
+    height: 100%;
+    transition: 400ms;
+    background-image: url("img/content/movie-trailer.png");
+}
+
+.movie-trailer-box button
+{
+    width: 60px;
+    border: 0px;
+    height: 60px;
+    outline: none;
+    cursor: pointer;
+    transition: 400ms;
+    position: absolute;
+    border-radius: 50%;
+    background-color: #dd0000;
+    top: calc(50% - (60px / 2));
+    left: calc(50% - (60px / 2));
+    background-repeat: no-repeat;
+    background-image: url("img/content/movie-trailer-btn.png");
+}
+
+.movie-trailer-box:active button
+{
+    transform: scale(.9);
+}
+
+.movie-trailer-box button:active
+{
+    transform: scale(.9);
+}
+
+.movie-trailer-box:hover .movie-trailer
+{
+    transform: scale(1.07);
+}
+
+.movie-trailer-box:hover .movie-trailer-btn
+{
+    transition: 400ms;
+    background-color: #ff0000;
+}
+
+section.second-section
+{
+    z-index: 2;
+    width: 100%;
+    bottom: -470px;
+    position: absolute;
+}
+
+section .creddits-container
+{
+    width: 100%;
+    height: 280px;
+    background: #fff;
+    position: relative;
+}
+
+
+section .creddits-container:before,
+section .creddits-container:after
+{
+    content: '';
+    display: block;
+    position: absolute;
+    transform: rotate(-5deg);
+}
+
+section .creddits-container:before
+{
+    top: -85px;
+    width: 120%;
+    z-index: -1;
+    height: 210px;
+    background: #fff;
+}
+
+section .creddits-container:after
+{
+    top: -95px;
+    width: 100%;
+    height: 40px;
+    background-position: 0 0;
+    animation: tittle-name-anim 8s infinite;
+    -o-animation: tittle-name-anim 8s infinite;
+    -webkit-animation: tittle-name-anim 8s infinite;
+    animation-timing-function: linear;
+    background-image: url(img/footer/tittle-name-text.png);
+}
+
+@keyframes tittle-name-anim
+{
+    from
+    {
+        background-position: 0 0;
+    }
+    to
+    {
+        background-position: 243px 0;
+    }
+}
+
+section .creddits-container .creddits-content-box
+{
+    top: 40px;
+    display: block;
+    position: relative;
+}
+
+section .creddits-container .creddits-content-box h1,
+section .creddits-container .creddits-content-box h1 span
+{
+    color: #000;
+    font-size: 16px;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: "Roboto-Black";
+}
+
+
+.flex-content
+{
+    display: flex;
+    margin-top: 22px;
+    position: relative;
+    left: calc(50% - (770px / 2) );
+}
+
+.flex-content a.social-media
+{
+    color: #000;
+    display: flex;
+    font-size: 20px;
+    margin-left: 92px;
+    transition: 100ms;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: "Roboto-Black";
+}
+
+.flex-content a.social-media:nth-child(1):before
+{
+    top: -4px;
+    content: '';
+    width: 30px;
+    height: 30px;
+    transition: 100ms;
+    margin-right: 13px;
+    position: relative;
+    margin-left: 0px !important;
+    background-image: url(img/footer/logo_inst.png);
+}
+
+.flex-content a.social-media:nth-child(2)
+{
+    top: -3px;
+    width: 130px;
+    height: 29px;
+    position: relative;
+    background-size: 130px 29px;
+    background-image: url(img/footer/logo_marvel.png);
+}
+
+.flex-content a.social-media:nth-child(3):after
+{
+    top: 2px;
+    content: '';
+    width: 30px;
+    height: 18px;
+    transition: 100ms;
+    margin-left: 13px;
+    position: relative;
+    background-image: url(img/footer/logo_vk.png);
+}
+
+.flex-content a.social-media:hover
+{
+    transition: 100ms;
+    filter: contrast(0.6);
+}
